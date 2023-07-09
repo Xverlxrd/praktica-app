@@ -15,13 +15,19 @@
             <p class="card__item_body">{{ item.body }}</p>
         </div>
 
-        <a-button  class="card__item_btn">
+        <a-button class="card__item_btn" @click="openModal">
             Подробнее
         </a-button>
+
+        <CustomModalComponent @click="closeModal" :cardImg="cardImg"  v-if="modalVisible" @close="closeModal">
+
+        </CustomModalComponent>
     </div>
 </template>
 
 <script>
+import CustomModalComponent from "@/components/common/CustomModalComponent/CustomModalComponent.vue";
+
 export default {
     props: {
         item: {
@@ -29,6 +35,22 @@ export default {
         },
     },
     name: "CaseCardComponent",
+    data() {
+        return {
+            modalVisible: false,
+        };
+    },
+    methods: {
+        openModal() {
+            this.modalVisible = true;
+        },
+        closeModal() {
+            this.modalVisible = false;
+        },
+    },
+    components: {
+        CustomModalComponent,
+    },
     computed: {
         cardImg() {
             switch (this.item.id) {

@@ -26,37 +26,37 @@
     },
     {
       "id": 5,
-      "catigories": ["Энергетика", "VR + Moodle"],
+      "catigories": ["Энергетика", "Нефтегазовое дело", "VR + Moodle"],
       "name": "Регенеративные подогреватели низкого давления",
       "body": ""
     },
     {
       "id": 6,
-      "catigories": ["Энергетика", "VR + Moodle"],
-      "name": "7",
+      "catigories": ["Энергетика", "Нефтегазовое дело", "VR + Moodle"],
+      "name": "6",
       "body": ""
     },
     {
       "id": 7,
-      "catigories": ["Энергетика", "VR + Moodle"],
-      "name": "8",
+      "catigories": ["Энергетика", "Нефтегазовое дело", "VR + Moodle"],
+      "name": "7",
       "body": ""
     },
     {
       "id": 8,
-      "catigories": ["Энергетика", "VR + Moodle"],
-      "name": "9",
+      "catigories": ["Нефтегазовое дело", "VR + Moodle"],
+      "name": "8",
       "body": ""
     },
     {
       "id": 9,
-      "catigories": ["Энергетика", "VR + Moodle"],
-      "name": "10",
+      "catigories": ["Нефтегазовое дело", "VR + Moodle"],
+      "name": "9",
       "body": ""
     },
     {
       "id": 10,
-      "catigories": ["Энергетика", "VR + Moodle"],
+      "catigories": ["Нефтегазовое дело", "VR + Moodle"],
       "name": "10",
       "body": ""
     }

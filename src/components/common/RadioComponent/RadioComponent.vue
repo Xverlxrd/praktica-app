@@ -1,9 +1,9 @@
 <template>
     <div class="radio__container">
         <a-radio-group v-model:value="value1" button-style="solid" class="radio__items">
-            <a-radio-button value="1" class="radio__item">Все</a-radio-button>
-            <a-radio-button value="2" class="radio__item">Энергетика</a-radio-button>
-            <a-radio-button value="3" class="radio__item">Нефтегазовое дело</a-radio-button>
+            <a-radio-button value="1" @click="updateCategoriesName('Все')" class="radio__item">Все</a-radio-button>
+            <a-radio-button value="2" @click="updateCategoriesName('Энергетика')" class="radio__item">Энергетика</a-radio-button>
+            <a-radio-button value="3" @click="updateCategoriesName('Нефтегазовое дело')" class="radio__item">Нефтегазовое дело</a-radio-button>
         </a-radio-group>
 
         <a-space class="radio__icons">
@@ -16,18 +16,26 @@
 <script>
 import { defineComponent, ref } from 'vue';
 import { Icon } from '@iconify/vue';
-export default defineComponent( {
+
+export default defineComponent({
     name: "RadioComponent",
     components: {
         Icon
     },
+    props: {
+        updateCategoriesName: {
+            type: Function,
+            required: true
+        }
+    },
     setup() {
         const value1 = ref('1');
+
         return {
             value1
         };
-    },
-})
+    }
+});
 </script>
 
 <style scoped>

@@ -4,8 +4,8 @@
             <h1 class="case__title">VR - Тренажеры</h1>
 
             <div class="case__content">
-                <RadioComponent/>
-                <CaseComponent/>
+                <RadioComponent :updateCategoriesName="updateCategoriesName"/>
+                <CaseComponent :categoriesName="categoriesName"/>
             </div>
         </div>
     </div>
@@ -16,7 +16,18 @@ import RadioComponent from "@/components/common/RadioComponent/RadioComponent.vu
 import CaseComponent from "@/components/common/CaseComponent/CaseComponent.vue";
 export default {
     name: 'App',
-    components: {RadioComponent, CaseComponent}
+    data() {
+        return {
+            categoriesName: 'Все'
+        }
+    },
+    components: {RadioComponent, CaseComponent},
+    methods: {
+        updateCategoriesName(name) {
+            this.categoriesName = name
+            console.log(this.categoriesName)
+        }
+    }
 }
 </script>
 

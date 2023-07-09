@@ -6,7 +6,7 @@
         <a-pagination
             class="case__card_pagination"
             :current="currentPage"
-            :total="data.length"
+            :total="filteredData.length"
             :pageSize="pageSize"
             size="small"
             @change="handlePageChange"
@@ -22,6 +22,12 @@ export default {
     components: {
         CaseCardComponent
     },
+    props: {
+        categoriesName: {
+            type: String,
+            required: true
+        }
+    },
     data() {
         return {
             data: [],
@@ -30,10 +36,19 @@ export default {
         };
     },
     computed: {
+        filteredData() {
+            if (this.categoriesName === "Все") {
+                return this.data;
+            } else {
+                return this.data.filter(item =>
+                    item.catigories.includes(this.categoriesName)
+                );
+            }
+        },
         displayedData() {
             const startIndex = (this.currentPage - 1) * this.pageSize;
             const endIndex = startIndex + this.pageSize;
-            return this.data.slice(startIndex, endIndex);
+            return this.filteredData.slice(startIndex, endIndex);
         }
     },
     name: "CaseComponent",
