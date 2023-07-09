@@ -4,7 +4,6 @@
             <CaseCardComponent :item="item" />
         </div>
         <a-pagination
-            v-if="!data"
             class="case__card_pagination"
             :current="currentPage"
             :total="filteredData.length"
