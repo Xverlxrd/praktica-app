@@ -24,25 +24,27 @@ export default {
 }
 </script>
 
-<style scoped>
-.content__title{
+<style lang="scss" scoped>
+.content__title {
     width: 100%;
     padding-top: 66px;
     border-bottom: 1px solid rgba(164, 166, 181, 1);
 }
-.content__categories_item{
+
+.content__categories_item {
     border-radius: 100px;
     border: 1px solid #A4A6B5;
     color: #222E37;
     font-size: 14px;
     font-weight: 700;
     line-height: 150%;
-    opacity: 0.699999988079071;
+    opacity: 0.7;
     width: 105px;
     height: 25px;
     text-align: center;
 }
-.content__title_text{
+
+.content__title_text {
     padding-top: 16px;
     width: 691px;
     font-size: 52px;
@@ -51,10 +53,12 @@ export default {
     color: #222E37;
     text-transform: uppercase;
 }
-.content__title_body{
+
+.content__title_body {
     color:  #222E37;
     font-size: 18px;
     font-weight: 500;
     line-height: 150%;
 }
+
 </style>

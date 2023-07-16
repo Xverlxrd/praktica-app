@@ -63,7 +63,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .content__container{
     max-width: 1140px;
     margin: 0 auto;

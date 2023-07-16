@@ -26,69 +26,75 @@ export default {
 }
 </script>
 
-<style scoped>
-.content__result{
+<style lang="scss" scoped>
+.content__result {
     display: flex;
     flex-direction: column;
     row-gap: 70px;
 
-}
-.content__result_text{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-.content__result_title{
-    color: #222E37;
-    font-size: 32px;
-    font-weight: 500;
-    line-height: 150%;
-}
-.content__result_body{
-    opacity: 0.699999988079071;
-    width: 655px;
-    color: #222E37;
-    font-size: 24px;
-    font-weight: 500;
-    line-height: 150%;
-}
-.content__result_values{
-    align-self: flex-end;
-    column-gap: 150px;
-    align-items: center;
-    width: 658px;
-    display: flex;
-    flex-wrap: wrap;
-    row-gap: 60px;
+    .content__result_text {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
 
-}
-.content__result_value{
-    width: 150px;
-    display: flex;
-    flex-direction: column;
-    position: relative;
-}
-.result__value{
-    color: #0A7CFF;
-    font-size: 50px;
-    font-weight: 600;
-    line-height: 150%;
-}
-.result__size{
-    color: #0A7CFF;
-    font-size: 30px;
-    font-weight: 600;
-    line-height: 150%;
-    position: absolute;
-    top: 1px;
-    right: 1px;
-}
-.result__text{
-    opacity: 0.699999988079071;
-    color: #222E37;
-    font-size: 24px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 120%;
+        .content__result_title {
+            color: #222E37;
+            font-size: 32px;
+            font-weight: 500;
+            line-height: 150%;
+        }
+
+        .content__result_body {
+            opacity: 0.7;
+            width: 655px;
+            color: #222E37;
+            font-size: 24px;
+            font-weight: 500;
+            line-height: 150%;
+        }
+    }
+
+    .content__result_values {
+        align-self: flex-end;
+        column-gap: 150px;
+        align-items: center;
+        width: 658px;
+        display: flex;
+        flex-wrap: wrap;
+        row-gap: 60px;
+
+        .content__result_value {
+            width: 150px;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+
+            .result__value {
+                color: #0A7CFF;
+                font-size: 50px;
+                font-weight: 600;
+                line-height: 150%;
+            }
+
+            .result__size {
+                color: #0A7CFF;
+                font-size: 30px;
+                font-weight: 600;
+                line-height: 150%;
+                position: absolute;
+                top: 1px;
+                right: 1px;
+            }
+
+            .result__text {
+                opacity: 0.7;
+                color: #222E37;
+                font-size: 24px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 120%;
+            }
+        }
+    }
 }
 </style>

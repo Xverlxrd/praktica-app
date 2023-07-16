@@ -36,48 +36,53 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .content__methodists {
     display: flex;
     flex-direction: column;
     row-gap: 30px;
-}
-.content__methodists_title {
-    color: #222E37;
-    font-size: 32px;
-    font-weight: 500;
-    line-height: 150%;
-}
-.content__methodists_body {
 
-}
-.content__methodists_images {
-    display: flex;
-    gap: 10px;
-}
-.content__methodists_img-wrapper {
-    position: relative;
-    width: 366px;
-    height: 371px;
-    background-color: #F7F6FB;
-    border-radius: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.content__methodists_img {
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: contain;
-}
-.content__methodists_text {
-    position: absolute;
-    bottom: 14px;
-    left: 20px;
-    color: #222E37;
-    font-size: 18px;
-    font-weight: 600;
-    line-height: 130%;
-    text-transform: uppercase;
+    .content__methodists_title {
+        color: #222E37;
+        font-size: 32px;
+        font-weight: 500;
+        line-height: 150%;
+    }
+
+    .content__methodists_body {
+    }
+
+    .content__methodists_images {
+        display: flex;
+        gap: 10px;
+
+        .content__methodists_img-wrapper {
+            position: relative;
+            width: 366px;
+            height: 371px;
+            background-color: #F7F6FB;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            .content__methodists_img {
+                max-width: 100%;
+                max-height: 100%;
+                object-fit: contain;
+            }
+
+            .content__methodists_text {
+                position: absolute;
+                bottom: 14px;
+                left: 20px;
+                color: #222E37;
+                font-size: 18px;
+                font-weight: 600;
+                line-height: 130%;
+                text-transform: uppercase;
+            }
+        }
+    }
 }
 </style>

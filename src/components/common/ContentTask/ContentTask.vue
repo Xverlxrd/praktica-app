@@ -19,27 +19,31 @@ export default {
 }
 </script>
 
-<style scoped>
-.content__task{
-    display: flex;
-    justify-content: space-between;
-}
-.content__task_title{
+<style lang="scss" scoped>
+.content__task {
+  display: flex;
+  justify-content: space-between;
+
+  .content__task_title {
     color: #222E37;
     font-size: 32px;
     font-style: normal;
     font-weight: 500;
     line-height: 150%;
-}
-.content__task_text{
+  }
+
+  .content__task_text {
     width: 560px;
-}
-.content__task_body{
+  }
+
+  .content__task_body {
     color: #222E37;
     font-size: 24px;
     font-style: normal;
     font-weight: 500;
     line-height: 150%;
-    opacity: 0.699999988079071;
+    opacity: 0.7;
+  }
 }
+
 </style>

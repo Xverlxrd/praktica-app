@@ -40,7 +40,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
    .header__wrapper{
        width: 100%;
        background-size: cover;

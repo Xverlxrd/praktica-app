@@ -24,33 +24,38 @@ export default {
 }
 </script>
 
-<style scoped>
-.content__problems{
+<style lang="scss" scoped>
+.content__problems {
     display: flex;
     flex-direction: column;
     row-gap: 30px;
+
+    .content__problems_title {
+        color: #222E37;
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 150%;
+    }
+
+    .content__problems_body {
+        display: flex;
+        column-gap: 20px;
+
+        .content__problems_item {
+            width: 367px;
+            color: #222E37;
+            font-size: 18px;
+            font-weight: 500;
+            line-height: 150%;
+            opacity: 0.7;
+        }
+    }
+
+    .content__problems_img {
+        align-self: flex-end;
+        border-radius: 10px;
+    }
 }
-.content__problems_title{
-    color: #222E37;
-    font-size: 32px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 150%;
-}
-.content__problems_body{
-    display: flex;
-    column-gap: 20px;
-}
-.content__problems_item{
-    width: 367px;
-    color: #222E37;
-    font-size: 18px;
-    font-weight: 500;
-    line-height: 150%;
-    opacity: 0.699999988079071;
-}
-.content__problems_img{
-    align-self: flex-end;
-    border-radius: 10px;
-}
+
 </style>

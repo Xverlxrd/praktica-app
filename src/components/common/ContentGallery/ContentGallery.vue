@@ -62,50 +62,38 @@ export default {
 };
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .content__gallery {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 20px;
 
-}
+    .content__gallery_img {
+        object-fit: cover;
+        cursor: pointer;
+    }
 
-.content__gallery_img {
-    object-fit: cover;
+    .content__gallery_img--large {
+        grid-row-end: span 2;
+        grid-column-end: span 1;
+        border-radius: 10px;
+    }
 
-}
+    .content__gallery_img--wide {
+        grid-row-end: span 1;
+        grid-column-end: span 2;
+        border-radius: 10px;
+    }
 
-.content__gallery_img--large {
-    grid-row-end: span 2;
-    grid-column-end: span 1;
-    border-radius: 10px;
-}
+    .content__gallery_img--small {
+        grid-row-end: span 1;
+        grid-column-end: span 1;
+        border-radius: 10px;
+    }
 
-.content__gallery_img--wide {
-    grid-row-end: span 1;
-    grid-column-end: span 2;
-    border-radius: 10px;
-}
-
-.content__gallery_img--small {
-    grid-row-end: span 1;
-    grid-column-end: span 1;
-    border-radius: 10px;
-}
-
-.content__gallery_img--double-height {
-    grid-row-end: span 2;
-}
-
-.content__gallery {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 20px;
-}
-
-.content__gallery_img {
-    object-fit: cover;
-    cursor: pointer;
+    .content__gallery_img--double-height {
+        grid-row-end: span 2;
+    }
 }
 
 .modal {
@@ -120,25 +108,24 @@ export default {
     align-items: center;
     z-index: 999;
 
-}
+    .modal__content {
+        position: relative;
 
-.modal__content {
-    position: relative;
-}
+        img {
+            max-width: 100%;
+            max-height: 100%;
+        }
 
-.modal__content img {
-    max-width: 100%;
-    max-height: 100%;
-}
-
-.modal__close {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    background-color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
+        .modal__close {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    }
 }
 </style>

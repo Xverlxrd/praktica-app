@@ -26,38 +26,43 @@ export default {
 }
 </script>
 
-<style scoped>
-.content__virtual{
-    display: flex;
-    flex-direction: column;
-    row-gap: 30px;
-}
-.content__virtual_title{
+<style lang="scss" scoped>
+.content__virtual {
+  display: flex;
+  flex-direction: column;
+  row-gap: 30px;
+
+  .content__virtual_title {
     color: #222E37;
     font-size: 32px;
     font-weight: 500;
     line-height: 150%;
-}
-.content__virtual_body{
+  }
+
+  .content__virtual_body {
     display: flex;
     justify-content: space-between;
-}
-.content__virtual_img{
 
+    .content__virtual_img {
+    }
+
+    .content__virtual_list {
+      display: flex;
+      flex-direction: column;
+      row-gap: 24px;
+
+      .content__virtual_item {
+        width: 280px;
+        padding-bottom: 8px;
+        border-bottom: 1px solid #A4A6B5;
+        color: #222E37;
+        font-size: 24px;
+        font-weight: 500;
+        line-height: 150%;
+        opacity: 0.7;
+      }
+    }
+  }
 }
-.content__virtual_list{
-    display: flex;
-    flex-direction: column;
-    row-gap: 24px;
-}
-.content__virtual_item{
-    width: 280px;
-    padding-bottom: 8px;
-    border-bottom: 1px solid #A4A6B5;
-    color: #222E37;
-    font-size: 24px;
-    font-weight: 500;
-    line-height: 150%;
-    opacity: 0.699999988079071;
-}
+
 </style>
