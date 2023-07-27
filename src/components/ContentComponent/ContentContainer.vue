@@ -57,7 +57,7 @@ export default {
             }
         },
         imgUrl(img) {
-            return require('@/assets' + img); // Обновляем путь к изображениям
+            return require('@/assets/Cases' + img); // Обновляем путь к изображениям
         }
     },
 }

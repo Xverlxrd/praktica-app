@@ -3,16 +3,16 @@
       <div class="header__container">
           <nav class="header__nav">
               <div class="header__logo">
-                  <img class="header__logo_img" src="../../assets/logo.svg" alt="logo">
-                  <img class="header__logo_text" src="../../assets/logo_text.svg" alt="logo_text">
+                  <img class="header__logo_img" src="../../assets/Cases/logo.svg" alt="logo">
+                  <img class="header__logo_text" src="../../assets/Cases/logo_text.svg" alt="logo_text">
               </div>
 
               <ul class="header__nav_items">
                   <li class="header__nav_item">
-                      <img class="header__nav_img" src="../../assets/search.svg" alt="search">
+                      <img class="header__nav_img" src="../../assets/Cases/search.svg" alt="search">
                   </li>
                   <li class="header__nav_item">
-                      <img class="header__nav_img" src="../../assets/user.svg" alt="user">
+                      <img class="header__nav_img" src="../../assets/Cases/user.svg" alt="user">
                   </li>
                   <li class="header__nav_item">
                       <p class="header__nav_ru">Ru</p>
@@ -20,15 +20,15 @@
                       <p class="header__nav_eng">Eng</p>
                   </li>
                   <li class="header__nav_item">
-                      <img class="header__nav_img" src="../../assets/menu.png" alt="menu">
+                      <img class="header__nav_img" src="../../assets/Cases/menu.png" alt="menu">
                   </li>
               </ul>
           </nav>
 
           <div class="header__social_container">
-              <img class="header__social_img" src="../../assets/vk.svg" alt="social img">
-              <img class="header__social_img" src="../../assets/tg.svg" alt="social img">
-              <img class="header__social_img" src="../../assets/youtube.svg" alt="social img">
+              <img class="header__social_img" src="../../assets/Cases/vk.svg" alt="social img">
+              <img class="header__social_img" src="../../assets/Cases/tg.svg" alt="social img">
+              <img class="header__social_img" src="../../assets/Cases/youtube.svg" alt="social img">
           </div>
       </div>
   </header>
@@ -44,7 +44,7 @@ export default {
    .header__wrapper{
        width: 100%;
        background-size: cover;
-       background-image: url("@/assets/background_header.svg");
+       background-image: url("@/assets/Cases/background_header.svg");
        background-repeat: no-repeat;
        background-position: center;
    }
