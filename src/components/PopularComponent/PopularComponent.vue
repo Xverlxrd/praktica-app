@@ -14,8 +14,8 @@ export default {
 
 <template>
   <div class="popular__container">
-    <p class="popular__text">проекты</p>
-    <h1 class="popular__title">Популярные тренажеры</h1>
+    <p class="popular__text">{{ $t('projects') }}</p>
+    <h1 class="popular__title">{{ $t('popularSimulators') }}</h1>
     <ul class="popular__list">
       <li v-for="item in jsonData" :key="item.id" class="popular__item">
         <img class="popular__img" :src="require(`@/assets/Home/${item.img}.svg`)" :alt="item.name">
@@ -25,9 +25,10 @@ export default {
         <h1 class="popular__name">{{ item.name }}</h1>
       </li>
     </ul>
-    <MyButton>Больше тренажеров</MyButton>
+    <MyButton>{{ $t('moreSimulators') }}</MyButton>
   </div>
 </template>
+
 
 <style scoped lang="scss">
 .popular__container{

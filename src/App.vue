@@ -2,6 +2,8 @@
   <nav>
     <router-link to="/"></router-link>
     <router-link to="/cases"></router-link>
+    <router-link to="/auth"></router-link>
+    <router-link to="/registration"></router-link>
   </nav>
   <router-view/>
 </template>
@@ -104,3 +106,5 @@ body{
   font-family: 'Raleway', sans-serif;
 }
 </style>
+<script setup>
+</script>

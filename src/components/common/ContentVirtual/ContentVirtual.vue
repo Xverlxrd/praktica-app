@@ -1,28 +1,42 @@
 <template>
   <div class="content__virtual">
-      <h3 class="content__virtual_title">{{date.virtual.title}}</h3>
-      <div class="content__virtual_body">
-          <img :src="imgUrl(date.virtual.img)" class="content__virtual_img" alt="Virtual Img">
-          <ul class="content__virtual_list">
-              <li v-for="item in date.virtual.body" :key="item" class="content__virtual_item">{{item}}</li>
-          </ul>
-      </div>
+    <h3 class="content__virtual_title">{{ date.virtual.title }}</h3>
+    <div class="content__virtual_body">
+      <img :src="imgUrl(date.virtual.img)" class="content__virtual_img" alt="Virtual Img">
+      <ul class="content__virtual_list">
+        <li v-for="item in date.virtual.body" :key="item" class="content__virtual_item">{{ item }}</li>
+      </ul>
+    </div>
   </div>
 </template>
 
 <script>
 export default {
-    name: "ContentVirtual",
-    props: {
-        date: {
-            type: Object,
-            required: true
-        },
-        imgUrl: {
-            type: Function,
-            required: true
-        }
+  name: "ContentVirtual",
+  props: {
+    date: {
+      type: Object,
+      required: true
+    },
+    imgUrl: {
+      type: Function,
+      required: true
     }
+  },
+  computed: {
+    currentLanguage() {
+      return this.$i18n.locale;
+    }
+  },
+  methods: {
+    toggleLanguage() {
+      if (this.$i18n.locale === 'ru') {
+        this.$i18n.locale = 'en';
+      }else if (this.$i18n.locale === 'en') {
+        this.$i18n.locale = 'ru';
+      }
+    }
+  }
 }
 </script>
 

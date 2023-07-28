@@ -1,5 +1,5 @@
 <template>
-  <SliderComponent/>qq
+  <SliderComponent/>
   <div class="home__container">
     <PopularComponent/>
     <InfoComponent/>

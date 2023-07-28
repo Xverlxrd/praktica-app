@@ -2,7 +2,7 @@
 import MyButton from "@/components/UI/MyButton.vue";
 
 export default {
-  components: {MyButton}
+  components: {MyButton},
 
 }
 </script>
@@ -10,20 +10,20 @@ export default {
 <template>
   <div class="feedback__container">
     <div class="feedback__info">
-      <h1 class="feedback__info_title">Заинтересованы в работе вместе с нами?</h1>
+      <h1 class="feedback__info_title">{{ $t('feedbackInfoTitle') }}</h1>
       <div class="feedback__info_data">
-        <h3 class="feedback__data_city">г. Томск</h3>
+        <h3 class="feedback__data_city">{{ $t('feedbackDataCity') }}</h3>
         <ul class="feedback__data_contact">
           <li class="feedback__contact_item">
-            <p class="feedback__contact_title">Позвоните нам:</p>
-            <p class="feedback__contact_text">8 923 422 - 22 - 22</p>
+            <p class="feedback__contact_title">{{ $t('feedbackContactCall') }}</p>
+            <p class="feedback__contact_text">{{ $t('feedbackContactPhone') }}</p>
           </li>
           <li class="feedback__contact_item">
-            <p class="feedback__contact_title">Напишите нам:</p>
-            <p class="feedback__contact_text">email@gmail.com</p>
+            <p class="feedback__contact_title">{{ $t('feedbackContactWrite') }}</p>
+            <p class="feedback__contact_text">{{ $t('feedbackContactEmail') }}</p>
           </li>
           <li class="feedback__contact_item">
-            <p class="feedback__contact_title">Мы в соц. сетях:</p>
+            <p class="feedback__contact_title">{{ $t('feedbackContactSocial') }}</p>
             <div class="feedback__contact_sotial">
               <img class="feedback__sotial_img" src="@/assets/Home/Vk.svg" alt="Vk">
               <img class="feedback__sotial_img" src="@/assets/Home/Tg.svg" alt="Tg">
@@ -35,20 +35,20 @@ export default {
     </div>
 
     <div class="feedback__form">
-      <h1 class="feedback__form_title">Свяжитесь с нами или заполните форму подачи заявки.</h1>
+      <h1 class="feedback__form_title">{{ $t('feedbackFormTitle') }}</h1>
       <div class="feedback__form_inputs">
-        <input class="feedback__form_input" placeholder="Ваш номер телефона" type="tel">
-        <input class="feedback__form_input" placeholder="Ваш E-mail адрес" type="email">
-        <input class="feedback__form_input" placeholder="Сообщение" type="text">
+        <input class="feedback__form_input" :placeholder="$t('feedbackFormPhone')" type="tel">
+        <input class="feedback__form_input" :placeholder="$t('feedbackFormEmail')" type="email">
+        <input class="feedback__form_input" :placeholder="$t('feedbackFormMessage')" type="text">
       </div>
       <div class="feedback__form_checkbox">
         <ACheckbox class="form__checkbox"/>
         <div class="form__checkbox_container">
-          <p class="form__checkbox_text">Я согласен на обработку</p>
-          <p class="form__checkbox_underline">персональных данных</p>
+          <p class="form__checkbox_text">{{ $t('feedbackFormCheckboxText') }}</p>
+          <p class="form__checkbox_underline">{{ $t('feedbackFormCheckboxUnderline') }}</p>
         </div>
       </div>
-      <MyButton style="align-self: start; width: 220px;">Оставить заявку</MyButton>
+      <MyButton style="align-self: start; width: 220px;">{{ $t('feedbackFormButton') }}</MyButton>
     </div>
   </div>
 </template>

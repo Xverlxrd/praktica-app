@@ -1,21 +1,35 @@
 <template>
   <div class="content__task">
-      <p class="content__task_title">{{date.task.title}}</p>
-      <div class="content__task_text">
-          <p v-for="body in date.task.body" :key="body" class="content__task_body">{{body}}</p>
-      </div>
+    <p class="content__task_title">{{ date.task.title }}</p>
+    <div class="content__task_text">
+      <p v-for="body in date.task.body" :key="body" class="content__task_body">{{ body }}</p>
+    </div>
   </div>
 </template>
 
 <script>
 export default {
-    name: "ContentTask",
-    props: {
-        date:{
-            type: Array,
-            required: true
-        },
+  name: "ContentTask",
+  props: {
+    date: {
+      type: Array,
+      required: true
+    },
+  },
+  computed: {
+    currentLanguage() {
+      return this.$i18n.locale;
     }
+  },
+  methods: {
+    toggleLanguage() {
+      if (this.$i18n.locale === 'ru') {
+        this.$i18n.locale = 'en';
+      }else if (this.$i18n.locale === 'en') {
+        this.$i18n.locale = 'ru';
+      }
+    }
+  }
 }
 </script>
 

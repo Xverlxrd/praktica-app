@@ -4,7 +4,21 @@
 import MyButton from "@/components/UI/MyButton.vue";
 
 export default {
-  components: {MyButton}
+  components: {MyButton},
+  computed: {
+    currentLanguage() {
+      return this.$i18n.locale;
+    }
+  },
+  methods: {
+    toggleLanguage() {
+      if (this.$i18n.locale === 'ru') {
+        this.$i18n.locale = 'en';
+      } else if (this.$i18n.locale === 'en') {
+        this.$i18n.locale = 'ru';
+      }
+    }
+  }
 }
 </script>
 
@@ -13,7 +27,7 @@ export default {
     <div class="header__container">
       <nav class="header__nav">
         <div class="header__logo">
-            <img class="header__logo_img" src="../../assets/Cases/logo.svg" alt="logo">
+          <img class="header__logo_img" src="../../assets/Cases/logo.svg" alt="logo">
           <img class="header__logo_text" src="../../assets/Cases/logo_text.svg" alt="logo_text">
         </div>
 
@@ -22,12 +36,14 @@ export default {
             <img class="header__nav_img" src="../../assets/Cases/search.svg" alt="search">
           </li>
           <li class="header__nav_item">
-            <img class="header__nav_img" src="../../assets/Cases/user.svg" alt="user">
+            <router-link to="/auth">
+              <img class="header__nav_img" src="../../assets/Cases/user.svg" alt="user">
+            </router-link>
           </li>
-          <li class="header__nav_item">
-            <p class="header__nav_ru">Ru</p>
+          <li @click="toggleLanguage"  class="header__nav_item">
+            <p class="header__nav_ru">{{ $t('russian') }}</p>
             <p class="header__nav_slash">/</p>
-            <p class="header__nav_eng">Eng</p>
+            <p class="header__nav_eng">{{ $t('english') }}</p>
           </li>
           <li class="header__nav_item">
             <img class="header__nav_img" src="../../assets/Cases/menu.png" alt="menu">
@@ -39,18 +55,18 @@ export default {
         <div class="header__info_content">
           <div class="header__categories">
             <div class="header__categories_item">
-              <p class="header__categories_text">Энергетика</p>
+              <p class="header__categories_text">{{ $t('energy') }}</p>
             </div>
             <div class="header__categories_item">
-              <p class="header__categories_text">VR + Moodle</p>
+              <p class="header__categories_text">{{ $t('vrMoodle') }}</p>
             </div>
           </div>
-          <h1 class="header__info_name">Первичная диагностика ассинхронных двигателей</h1>
+          <h1 class="header__info_name">{{ $t('primaryDiagnostic') }}</h1>
           <div class="header__info_btns">
             <router-link to="/cases">
-              <MyButton style="color: white; background: #0A7CFF">Подробнее</MyButton>
+              <MyButton style="color: white; background: #0A7CFF">{{ $t('learnMore') }}</MyButton>
             </router-link>
-            <p class="header__info_text">Все тренажеры</p>
+            <p class="header__info_text">{{ $t('allSimulators') }}</p>
           </div>
         </div>
         <div class="header__info_vidio">
@@ -63,7 +79,7 @@ export default {
           <div class="header__pagination_btn">
             <img src="@/assets/Home/angle-left.svg" alt="arrow">
           </div>
-          <p class="header__pagination_numbers">01/32</p>
+          <p class="header__pagination_numbers">{{ $t('pagination', { current: '01', total: '32' }) }}</p>
           <div class="header__pagination_btn">
             <img src="@/assets/Home/angle-right.svg" alt="arrow">
           </div>
