@@ -1,6 +1,8 @@
 <template>
+  <SliderComponent/>qq
   <div class="home__container">
     <PopularComponent/>
+    <InfoComponent/>
     <FeedbackComponent/>
   </div>
 </template>
@@ -9,10 +11,12 @@
 
 import PopularComponent from "@/components/PopularComponent/PopularComponent.vue";
 import FeedbackComponent from "@/components/FeedbackComponent/FeedbackComponent.vue";
+import InfoComponent from "@/components/InfoComponent/InfoComponent.vue";
+import SliderComponent from "@/components/SliderCOmponent/SliderComponent.vue";
 
 export default {
   name: 'HomeView',
-  components: {FeedbackComponent, PopularComponent},
+  components: {SliderComponent, InfoComponent, FeedbackComponent, PopularComponent},
 
 };
 </script>

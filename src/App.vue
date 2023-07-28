@@ -1,12 +1,14 @@
 <template>
   <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/cases">About</router-link>
+    <router-link to="/"></router-link>
+    <router-link to="/cases"></router-link>
   </nav>
   <router-view/>
 </template>
 
 <style lang="scss">
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800;900&display=swap');
 
 * {
   padding: 0px;
@@ -99,5 +101,6 @@ legend {
 body{
   width: 100%;
   height: 100vh;
+  font-family: 'Raleway', sans-serif;
 }
 </style>

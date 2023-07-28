@@ -3,7 +3,9 @@
       <div class="header__container">
           <nav class="header__nav">
               <div class="header__logo">
+                <router-link to="/">
                   <img class="header__logo_img" src="../../assets/Cases/logo.svg" alt="logo">
+                </router-link>
                   <img class="header__logo_text" src="../../assets/Cases/logo_text.svg" alt="logo_text">
               </div>
 

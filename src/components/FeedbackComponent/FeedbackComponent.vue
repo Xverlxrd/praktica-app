@@ -58,6 +58,7 @@ export default {
   display: flex;
   column-gap: 193px;
   align-items: center;
+  padding-bottom: 140px;
 }
 .feedback__info{
   display: flex;
