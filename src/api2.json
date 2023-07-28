@@ -1,0 +1,98 @@
+{
+  "case": [
+    {
+      "name": {
+        "categories": ["Energy", "VR + Moodle"],
+        "title": "Electric Machine Diagnostics",
+        "body": "Digital Ecosystem in Energy"
+      },
+      "target": {
+        "title": "Objective",
+        "body": "Training and assessment of skills in diagnosing asynchronous motors."
+      },
+      "task": {
+        "title": "Task",
+        "body": [
+          "1. Checking the free rotation of the shaft.",
+          "2. Checking the windings for breaks and short circuits.",
+          "3. Marking the phase winding.",
+          "4. Connecting the winding to the required scheme, star or delta.",
+          "5. Connecting the power supply, initial start without load."
+        ]
+      },
+      "headset": {
+        "title": "Headset",
+        "img": ["/headset_1.png", "/headset_2.png"],
+        "body": ["Oculus Quest 2", "PICO"]
+      },
+      "virtual": {
+        "title": "Virtual Space",
+        "img": "/scheme.png",
+        "body": [
+          "Multifunctional tool",
+          "Multimeter",
+          "Megohmmeter",
+          "Rubber coating",
+          "Workplace",
+          "Shelf",
+          "Workbench",
+          "Ladder"
+        ]
+      },
+      "safety": {
+        "title": "Safety",
+        "body": "A complex of events has been thought out and modeled, in which a short circuit occurs, equipment is damaged, or harm is done to a person.",
+        "img": "/safety.png"
+      },
+      "problems": {
+        "title": "Problems and Challenges",
+        "body": [
+          "During the work, the system reacts to the actions of the trainee and, in case of incorrect actions, leads to various motor malfunctions.",
+          "A model of the motor's behavior has been thought out for all possible malfunctions and incorrect sequences of actions of the trainee."
+        ],
+        "img": "/problem.png"
+      },
+      "cards": {
+        "img": [
+          "/img_1.png",
+          "/img_2.png",
+          "/img_3.png",
+          "/img_4.png",
+          "/img_5.png",
+          "/img_6.png"
+        ]
+      },
+      "methodists": {
+        "title": "Methodists",
+        "img": ["/meto_1.png","/meto_2.png"],
+        "body": ["Tyut'eva P.V.", "Beyerley'n E.V."]
+      },
+      "result": {
+        "title": "Result",
+        "body": "The system provides automatic assessment of the work done and feedback from the course instructor.",
+        "values": [
+          {
+            "value": "2",
+            "size": "months",
+            "text": "Development time"
+          },
+          {
+            "value": "200",
+            "size": "thousand",
+            "text": "Project cost"
+          },
+          {
+            "value": "51",
+            "size": "m^2",
+            "text": "Total space area"
+          },
+          {
+            "value": "+60",
+            "size": "",
+            "text": "3D Objects"
+          }
+        ]
+      }
+    }
+  ]
+}

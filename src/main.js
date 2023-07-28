@@ -3,7 +3,7 @@ import App from "./App.vue";
 import Antd from 'ant-design-vue';
 import 'ant-design-vue/dist/antd.css';
 import router from './router'
-import { createI18n } from 'vue-i18n'; // Используйте createI18n вместо VueI18n
+import { createI18n } from 'vue-i18n';
 import messages from './locales';
 
 export const i18n = createI18n({
